@@ -16,13 +16,13 @@ async function testSheetsConnection() {
         if (response.data.success && response.data.data) {
             console.log(`\n👥 Found ${response.data.count} contacts:`);
             response.data.data.forEach((contact, index) => {
-                console.log(`   ${index + 1}. ${contact.name} - ${contact.number}`);
+                console.log(`   ${index + 1}. ${contact['Business Name']} - ${contact['Phone Number']}`);
             });
             
             // Test message template
             console.log('\n📝 Testing message template:');
             const testContact = response.data.data[0];
-            const testMessage = config.MESSAGE_TEMPLATE.replace('{name}', testContact.name);
+            const testMessage = config.MESSAGE_TEMPLATE.replace('{name}', testContact['Business Name']);
             console.log(`   Template: ${config.MESSAGE_TEMPLATE}`);
             console.log(`   Sample: ${testMessage}`);
         } else {

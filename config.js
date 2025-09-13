@@ -1,7 +1,7 @@
 // Configuration file for WhatsApp Bot
 module.exports = {
   // Google Sheets API URL
-  SHEETS_URL: 'https://script.google.com/macros/s/AKfycbxTstRIZ8n5ItcVCq43r4UJhdNwuy0_cu3s-uvR9jWVVFa1N7FV218Ulp-5BWUVkrlD/exec',
+  SHEETS_URL: 'https://script.google.com/macros/s/AKfycbyCPhCjeVZ7nyuCwg34pHtK4Sk9w6GJuyHiR5sJpEJbzR8xbi3LXtQ1p9WhtcypDQrw8A/exec',
   
   // Message template with {name} placeholder
   MESSAGE_TEMPLATE: 'Hello! {name} 👋 Thanks for reaching out. Please let me know your query and I\'ll get back to you shortly.',

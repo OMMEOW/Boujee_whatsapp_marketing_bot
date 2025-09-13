@@ -109,22 +109,22 @@ class TestMessageSender {
 
         for (const contact of contacts) {
             try {
-                const phoneNumber = this.formatPhoneNumber(contact.number);
-                const message = this.createPersonalizedMessage(contact.name);
+                const phoneNumber = this.formatPhoneNumber(contact['Phone Number']);
+                const message = this.createPersonalizedMessage(contact['Business Name']);
                 
-                console.log(`📤 Sending message to ${contact.name} (${contact.number})`);
+                console.log(`📤 Sending message to ${contact['Business Name']} (${contact['Phone Number']})`);
                 
                 const chatId = phoneNumber;
                 await this.client.sendMessage(chatId, message);
                 
-                console.log(`✅ Message sent successfully to ${contact.name}`);
+                console.log(`✅ Message sent successfully to ${contact['Business Name']}`);
                 successCount++;
                 
                 // Add delay between messages
                 await new Promise(resolve => setTimeout(resolve, 3000));
                 
             } catch (error) {
-                console.error(`❌ Failed to send message to ${contact.name}:`, error.message);
+                console.error(`❌ Failed to send message to ${contact['Business Name']}:`, error.message);
                 failureCount++;
             }
         }
